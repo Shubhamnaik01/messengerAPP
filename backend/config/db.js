@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 const connectDB = async () => {
   try {
     const connection = await mongoose.connect(process.env.MONGO_URI); // This will return an response from mongoose for DB connection
-    console.log("DB connected successfully", connection.connection.host); // connection is property in response object which holds the active connection state
+    console.log("DB connected successfully", connection.connection.host); // connection is a property in response object which holds the active connection state
     // .host is a property which tells the URL or IP address of the server we just connected
   } catch (error) {
     console.log("Error while connecting to DB :", error.message);
